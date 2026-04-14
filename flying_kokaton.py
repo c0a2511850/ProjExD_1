@@ -33,7 +33,7 @@ def main():
         #if key_lst[pg.K_RIGHT]:#練習10-4
         #    kouka_rct.move_ip((+2, 0))#練習10-4
         a=0
-        b=0
+        b=-1
         if key_lst[pg.K_UP]:
             a-=1
         if key_lst[pg.K_DOWN]:
