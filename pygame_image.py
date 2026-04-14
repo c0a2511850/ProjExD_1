@@ -31,7 +31,7 @@ def main():
         if key_lst[pg.K_LEFT]:#練習10-4
             kouka_rct.move_ip((-1, 0))#練習10-4
         if key_lst[pg.K_RIGHT]:#練習10-4
-            kouka_rct.move_ip((+1, 0))#練習10-4
+            kouka_rct.move_ip((+2, 0))#練習10-4
         x = tmr%3200#練習5#練習9
         screen.blit(bg_img, [-x, 0])#練習2#練習5
         screen.blit(bg2_img, [-x+1600, 0])#練習7#練習8
