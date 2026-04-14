@@ -18,10 +18,12 @@ def main():
     screen.blit(kouka_img, kouka_rct)#練習10-1こうかとんrect習得
     tmr = 0
     while True:
+
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
         key_lst = pg.key.get_pressed()#練習10-3
+        kouka_rct.move_ip((-1,0))
         if key_lst[pg.K_UP]:#練習10-4
             kouka_rct.move_ip((0, -1))#練習10-4
         if key_lst[pg.K_DOWN]:#練習10-4
