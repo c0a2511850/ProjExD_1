@@ -10,18 +10,20 @@ def main():
     screen = pg.display.set_mode((800, 600))
     clock  = pg.time.Clock()
     bg_img = pg.image.load("fig/pg_bg.jpg")#練習1
+    bg2_img = pg.transform.flip(bg_img, True, False)#練習8
     kouka_img = pg.image.load("fig/3.png")#練習3
     kouka_img = pg.transform.flip(kouka_img, True, False)#練習3
     tmr = 0
-    x = 0#練習5
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
-        screen.blit(bg_img, [x, 0])#練習2#練習5
+        x = tmr%3200#練習5
+        screen.blit(bg_img, [-x, 0])#練習2#練習5
+        screen.blit(bg2_img, [-x+1600, 0])#練習7#練習8
+        screen.blit(bg_img, [-x+3200, 0])
         screen.blit(kouka_img, [300, 200])#練習4
         pg.display.update()
-        x += -1#練習5
         tmr += 1        
         clock.tick(200)#練習6
 
